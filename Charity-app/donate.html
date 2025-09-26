@@ -1,0 +1,127 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CharityApp| Donate</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+      CharityApp </div>
+     <input type="checkbox" name="" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger"><i class="fa fa-bars"></i></label>
+      <ul class="nav-links">
+         <li>
+          <a href="index.html">Home</a>
+         </li>
+         <li>
+          <a href="about.html">About</a>
+         </li>
+         <li>
+          <a href="project.html">Projects</a>
+         </li>
+         <li>
+          <a href="donate.html"  aria-current="page">Donate</a>
+         </li>
+         <li>
+          <a href="contact.html">Contact</a>
+         </li>
+      </ul>
+    </nav>
+  </header>
+
+      <section id="donate fade-in" class="donate section">
+    <h2>Donate Now</h2>
+    <form>
+      <label for="amount">Donation Amount</label>
+      <select id="amount">
+        <option>$10</option>
+        <option>$20</option>
+        <option>$50</option>
+        <option>$100</option>
+        <option> $200</option>
+        <option> $300</option>
+        <option> $500</option>
+        <option> $1000</option>
+      </select>
+      
+      <label for="name">Name</label>
+      <input type="text" name="name"  id="name" placeholder="Your name" required>
+
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" placeholder="@gmail" required>
+
+      <button type="submit" class="btn">
+       <i class="fa fa-dollar-sign"></i> 
+        Donate
+      </button>
+    </form>
+  </section>
+
+  <section class="impact-funds fade-in">
+    <h2>Where Your Money Goes</h2>
+    <ul>
+      <li>
+        <i class="fa fa-book"></i>
+        40% - Education Program
+      </li>
+       <li>
+        <i class="fa fa-stethoscope"></i>
+        30% - Healthcare projects
+       </li>
+        <li>
+          <i class="fa fa-utensils"></i>
+          20% - Food distribution
+        </li>
+         <li>
+          <i class="fa fa-tools"></i>
+          10% - Adminisration & logistics
+         </li>
+    </ul>
+  </section>
+
+  <section class="recurring fade-in">
+    <h2>Make a Lasting Impact</h2>
+    <p>Set up a monthly donation and join our family of recurring donors.</p>
+    <a href="#" class="btn">
+      <i class="fa fa-sync-alt"></i>
+      Donate Monthly
+    </a>
+  </section>
+
+  <footer>
+    <p>&copy 2025 CharityApp. All rights reserved</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <script>
+  // Reveal elements on scroll
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2, // % of element visible before animation
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
+</script>
+</body>
+</html>

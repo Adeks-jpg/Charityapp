@@ -1,0 +1,126 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CharityApp| Projects</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+<header>
+  <nav>
+      <div class="logo">CharityApp </div>
+     <input type="checkbox" name="" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger"><i class="fa fa-bars"></i></label>
+      <ul class="nav-links">
+         <li>
+          <a href="index.html">Home</a>
+         </li>
+         <li>
+          <a href="about.html">About</a>
+         </li>
+         <li>
+          <a href="project.html"  aria-current="page">Projects</a>
+         </li>
+         <li>
+          <a href="donate.html">Donate</a>
+         </li>
+         <li>
+          <a href="contact.html">Contact</a>
+         </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="Projects fade-in">
+    <h2>Our projects</h2>
+    <div class="card-container">
+      <div class="card">
+         <img src="https://images.unsplash.com/photo-1588075592446-265fd1e6e76f?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="school Projects">
+         <h3>Education for  All </h3>
+         <p>Building schools and providing learning materials for children</p>
+          </div>
+        <div class="card">
+        <img  src="https://www.istockphoto.com/photo/water-falling-gm134107278-10223823?utm_campaign=srp_photos_top&utm_content=https%3A%2F%2Funsplash.com%2Fs%2Fphotos%2Fclean-water&utm_medium=affiliate&utm_source=unsplash&utm_term=clean+water%3A%3Aad-balancing-template%3Acontrol">
+        <h3>Clean Water Initiative</h3>
+        <p>Installing boreholes and wells in rural communities.</p>
+      </div>
+
+      <div class="card">
+       <img   src="https://unsplash.com/photos/low-angle-photography-of-man-in-the-middle-of-buidligns-Ua-agENjmI4">
+       <h3>Succes Stories</h3>
+       <p>See how your donation are transforming lives.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="campaigns fade-in">
+    <h2>More Ongoing Campaigns</h2>
+    <div class="campaign-container">
+      <div class="campaing">
+        <img src="https://images.unsplash.com/photo-1579651745194-ff4b0f1580d0?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJ1aWRpbmclMjBzY2hvb2x8ZW58MHx8MHx8fDA%3D" alt="school">
+        <h3>Build a school</h3>
+        <p>We're construsting classrooms for rural children who currently learn outdoors.</p>
+      </div>
+
+      <div class="campaing">
+        <img src="https://media.istockphoto.com/id/1312706504/photo/modern-hospital-building.webp?a=1&b=1&s=612x612&w=0&k=20&c=6O-3aHKMmBWeAZo9cj_6HGdjk8dadJSmYqT6Q-9kzrE=" alt="hospital">
+        <h3>Mobile Clinics</h3>
+        <p>Bringing healthcare to remote villages where hospitals are miles away.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="impact fade-in">
+    <h2>Our Impact</h2>
+    <div class="stats">
+     <div class="stat">
+     <h3>10,000+</h3>
+     <p>Children enrolled in school</p>
+     </div>
+    
+    <div class="stat">
+     <h3>500+</h3>
+     <p>Families fed monthly</p>
+    </div>
+     <div class="stat">
+      <h3>15+</h3>
+      <p>countries served</p>
+     </div>
+     </div>
+  </section>
+
+  <footer>
+    <p>&copy 2025 CharityApp. All rights reserved</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i> </a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+ 
+  <script>
+  // Reveal elements on scroll
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2, // % of element visible before animation
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+   
+</body>
+</html>

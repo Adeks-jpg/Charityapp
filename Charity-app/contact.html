@@ -1,0 +1,115 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CharityApp| Contact</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+      CharityApp </div>
+      <input type="checkbox" name="" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger"><i class="fa fa-bars"></i></label>
+      <ul class="nav-links">
+         <li>
+          <a href="index.html">Home</a>
+         </li>
+         <li>
+          <a href="about.html">About</a>
+         </li>
+         <li>
+          <a href="project.html">Projects</a>
+         </li>
+         <li>
+          <a href="donate.html">Donate</a>
+         </li>
+         <li>
+          <a href="contact.html"  aria-current="page">Contact</a>
+         </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="contact fade-in">
+  <h2>Contact Us</h2>
+  <form action="#" method="post">
+    <label for="name"> <i class="fa fa-user"></i> Name</label>
+    <input type="text" name="name" id="name" required>
+
+    <label for="email"> <i class="fa fa-envelope"></i>Email</label>
+    <input type="email" name="email" id="email" placeholder="" required>
+          
+    <label for="message"> <i class="fa fa-comment"></i>Message</label>
+    <textarea name="" id="message" placeholder="Write" required></textarea>
+
+    <button type="submit" class="btn"> <i class="fa fa-paper-plane"></i>
+      Send
+    </button>
+  </form>
+
+  <div class="map">
+    <p>©️ Our Location</p>
+    <img src="https://plus.unsplash.com/premium_photo-1682310071124-33632135b2ee?q=80&w=912&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Location Map">
+  </div>
+  </section>
+
+  <section class="faq fade-in">
+    <h2>Frequently Asked Question</h2>
+     <div class="faq-item">
+      <h3><i class="fa fa-question"></i>
+      How can i donate </h3>
+      <p>You can donate directly through our online donation form using debit
+        credit, or bank transfer.
+      </p>
+     </div>
+
+     <div class="faq-item">
+      <h3><i class="fa fa-question-circle"></i>
+      Can I volunteer</h3>
+      <p>Yes! we welcome volteers, Fill out our volunteer form or reach out via email
+      </p>
+     </div>
+
+     <div class="faq-item">
+      <h3><i class="fa fa-question-circle"></i>
+       Is my donation tax-deductible?</h3>
+       <p>Absolutely. All donation are eligible for tax deductions as per national laws</p>
+     </div>
+  </section>
+
+  <footer>
+    <p>&copy 2025 CharityApp. All rights reserved</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+  
+  <script>
+  // Reveal elements on scroll
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2, // % of element visible before animation
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+</body>
+</html>

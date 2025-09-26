@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CharityApp| About</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <nav>
+    <div class="logo">CharityApp</div>
+    <input type="checkbox" id="menu-toggle">
+    <label for="menu-toggle" class="hamburger"><i class="fa fa-bars"></i></label>
+      <ul class="nav-links">
+         <li>
+          <a href="index.html">Home</a>
+         </li>
+         <li>
+          <a href="about.html" aria-current="page">About</a>
+         </li>
+         <li>
+          <a href="project.html">Projects</a>
+         </li>
+         <li>
+          <a href="donate.html">Donate</a>
+         </li>
+         <li>
+          <a href="contact.html">Contact</a>
+         </li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="about fade-in">
+    <h1>About us</h1>
+    <h6>We are dedicated to creating a positive impact by addressing global challenges.</h6>
+
+    <div class="about-cards">
+      <div class="card">
+        <h3>Mission</h3>
+        <p>To uplift communities through education, Healthcare, and empowerment programs.
+        </p>
+      </div>
+      
+      <div class="card">
+        <h3>Vision</h3>
+        <p>A world where every child and family has access to food, shelter, and opportunity</p>
+      </div>
+
+      <div class="card">
+        <h3>History</h3>
+        <p>Founded in 2010, CharityApp has reached thousands of lives</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="values fade-in">
+    <h2>Our Core Values</h2>
+    <ul>
+      <li>
+        <i class="fa fa-check-circles"></i>
+        Intergrity in all we do 
+      </li>
+      <li> <i class="fa fa-check-circles"></i>
+      Compassion for the Vulnerable</li>
+      <li> <i class="fa fa-check-circles"></i>
+      Collaboration with partners</li>
+      <li><i class="fa fa-check-circles"></i>
+      Sustainability in every projects</li>
+    </ul>
+  </section>
+
+  <section class="team fade-in">
+    <h2>Meet Our Team</h2>
+    <div class="team-members">
+      <div class="member">
+         <img src="https://media.istockphoto.com/id/2185404677/photo/young-professional-walking-with-technology-and-confidence.jpg?s=612x612&w=0&k=20&c=xNHYyF7TYSZp9HZXOotrBu6-Afj3PBKXM2H_G45WHSw=" alt="Team member">
+         <h3>Jane Doe</h3>
+         <p>Founder & CEO</p>
+      </div>
+
+      <div class="member">
+        <img src="https://media.istockphoto.com/id/2199700727/photo/happy-senior-man-in-formal-attire-smiles-confidently-outdoors.webp?a=1&b=1&s=612x612&w=0&k=20&c=Gnl3AorjoczGO1KfIq9TWfaD5NpArzwU7BmQVOaLh9A=" alt="Team-member">
+        <h3>John Smith</h3>
+        <p>Program Director</p>
+         </div>
+        <div class="member">
+          <img src="https://media.istockphoto.com/id/2192261127/photo/business-woman-using-laptop.webp?a=1&b=1&s=612x612&w=0&k=20&c=RnCpTSMJR04_6eezEUvG38GLH6Dsq6rKZ3mVROCsgIM=" alt="Team-member">
+          <h3>Mary Johnson</h3>
+          <p>Community Manager</p>
+        </div>
+      </div>
+  </section>
+
+  <footer>
+    <p>&copy 2025 CharityApp. All rights reserved</p>
+    <div class="socials">
+      <a href="https://www.facebook.com/">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+
+  <script>
+  // Reveal elements on scroll
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2, // % of element visible before animation
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+
+</script>
+</body>
+</html>

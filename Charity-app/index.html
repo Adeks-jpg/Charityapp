@@ -1,0 +1,139 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CharityApp| Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1 class="logo">
+      CharityApp</h1>
+      <input type="checkbox" name="" id="menu-toggle">
+      <label for="menu-toggle" class="hamburger"><i class="fa fa-bars"></i></label>
+      <ul class="nav-links">
+         <li> 
+          <a href="index.html" aria-current="page">Home</a>
+         </li>
+         <li>
+          <a href="about.html">About</a>
+         </li>
+         <li>
+          <a href="project.html">Projects</a>
+         </li>
+         <li>
+          <a href="donate.html">Donate</a>
+         </li>
+         <li>
+          <a href="contact.html">Contact</a>
+         </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- hero -->
+  <section class="hero" fade-in>
+     <div class="hero-text">
+      <h2>Make a Difference Today</h2>
+      <p>Together we can bring hope, support, and change to lives in need.</p>
+
+      <a href="donate.html" class="btn">Donate Now</a>
+     </div>
+  </section>
+
+
+  <section class="causes">
+    <h2>Our Causes</h2>
+    <div class="card-container">
+      <div class="card">
+       <img src="https://plus.unsplash.com/premium_photo-1723773874409-8661740a79b6?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"alt="chid support">
+        <h3>Support Children</h3>
+        <p>Providing education and shelter for children in need.</p>
+         </div>
+
+         <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1673108852141-e8c3c22a4a22?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Food Aid">
+         <h2>Food Aid</h2>
+         <p>Delivering meals to families
+          struggling with hunger.</p>
+      </div>
+
+       <div class="card">
+        <img src="https://images.unsplash.com/photo-1625144094117-6612bbbe0a33?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Healthcare">
+        <h3>Healthcare</h3>
+        <p>Medical aid and supplies for underprivileged communities</p>
+       </div>
+    </div>
+  </section>
+
+<section class="why-us fade-in">
+  <h2>Why Choose Us</h2>
+  <div class="features">
+    <div class="feature">
+     <i class="fa fa-hand-holding-heart"></i>
+     <h3>Transparency</h3>
+     <p>Every dollar is accounted for.
+      We ensure funds reach the right hands.
+     </p>
+    </div>
+
+        <div class="feature">
+          <i class="fa fa-users"></i>
+          <h3>Community-Driven</h3>
+            <p>Our projects are designed by the communities themselves for lasting impact.</p>
+        </div>
+
+
+        
+    <div class="feature">
+        <i class="fa fa-globe"></i>
+        <h3>Global Reach</h3>
+        <p> We've expanded projects in over 15 countries across Africa and beyound.</p>
+    </div>
+  </div>
+</section>
+
+<section class="cta fade-in">
+ <h2>Your support can change a life today</h2>
+ <a href="donate.html" class="btn"><i class="fa fa-gift"></i> Become a Donor</a>
+</section>
+
+  <footer>
+    <p>&copy 2025 CharityApp. All rights reserved</p>
+    <div class="socials"> 
+      <a href="https://www.facebook.com/">
+        <i class="fab fa-facebook"></i>
+      </a>
+      <a href="https://x.com/"><i class="fab fa-twitter"></i></a>
+      <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+  
+<script>
+  // Reveal elements on scroll
+  const faders = document.querySelectorAll('.fade-in');
+
+  const appearOptions = {
+    threshold: 0.2, // % of element visible before animation
+  };
+
+  const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    });
+  }, appearOptions);
+
+  faders.forEach(fader => {
+    appearOnScroll.observe(fader);
+  });
+</script>
+
+</body>
+</html>
